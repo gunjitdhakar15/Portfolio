@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --bg: #fbfaf7;
   --ink: #1d1d1f;
   --muted: #6e6e73;
@@ -6,6 +7,27 @@
   --soft: #f0ede6;
   --accent: #0f766e;
   --accent-dark: #134e4a;
+  --button-bg: var(--ink);
+  --button-text: var(--bg);
+  --toggle-bg: #f0ede6;
+  --toggle-border: #dedbd2;
+  --toggle-text: #1d1d1f;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #060607;
+  --ink: #f4f1ea;
+  --muted: #aaa3b5;
+  --line: #2a2435;
+  --soft: #15121c;
+  --accent: #a78bfa;
+  --accent-dark: #c4b5fd;
+  --button-bg: #a78bfa;
+  --button-text: #08060d;
+  --toggle-bg: #15121c;
+  --toggle-border: #3b3150;
+  --toggle-text: #f4f1ea;
 }
 
 * {
@@ -29,11 +51,14 @@ body {
     sans-serif;
   font-size: 16px;
   line-height: 1.7;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 a {
   color: inherit;
-  text-decoration-color: rgba(15, 118, 110, 0.35);
+  text-decoration-color: color-mix(in srgb, var(--accent) 38%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
@@ -67,6 +92,42 @@ nav {
   gap: 18px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--toggle-border);
+  border-radius: 999px;
+  background: var(--toggle-bg);
+  color: var(--toggle-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.theme-toggle-icon {
+  display: inline-grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .intro {
@@ -123,8 +184,8 @@ h1 {
 
 .link-row a:first-child,
 .email-link {
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--button-bg);
+  color: var(--button-text);
 }
 
 .section {
@@ -159,7 +220,7 @@ h1 {
   grid-template-columns: 1fr 170px;
   gap: 24px;
   padding: 22px 0;
-  border-top: 1px solid rgba(222, 219, 210, 0.72);
+  border-top: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
 }
 
 .entry:first-child {
@@ -218,7 +279,7 @@ h1 {
   grid-template-columns: 110px 1fr;
   gap: 20px;
   padding: 14px 0;
-  border-top: 1px solid rgba(222, 219, 210, 0.72);
+  border-top: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
   text-decoration: none;
 }
 
@@ -284,6 +345,16 @@ h1 {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .header-actions {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    flex-wrap: wrap;
   }
 
   .intro {
