@@ -1,0 +1,310 @@
+:root {
+  --bg: #fbfaf7;
+  --ink: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #dedbd2;
+  --soft: #f0ede6;
+  --accent: #0f766e;
+  --accent-dark: #134e4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: rgba(15, 118, 110, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent-dark);
+}
+
+.page-shell {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 34px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.intro {
+  padding: 86px 0 78px;
+}
+
+.muted {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 720px;
+  margin-bottom: 24px;
+  font-size: clamp(2.7rem, 9vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.intro p {
+  max-width: 650px;
+  font-size: 1.08rem;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.link-row a,
+.email-link {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-row a {
+  padding: 0 16px;
+  background: var(--soft);
+  color: var(--accent-dark);
+}
+
+.link-row a:first-child,
+.email-link {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.section {
+  padding: 58px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  margin-bottom: 26px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.section-title p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.entry-list {
+  display: grid;
+  gap: 8px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr 170px;
+  gap: 24px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(222, 219, 210, 0.72);
+}
+
+.entry:first-child {
+  border-top: 0;
+}
+
+.entry h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.entry p {
+  max-width: 540px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.entry span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+}
+
+.split .section-title {
+  display: block;
+  margin-bottom: 0;
+}
+
+.skill-list {
+  display: grid;
+  gap: 12px;
+}
+
+.skill-list p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.skill-list strong {
+  color: var(--ink);
+}
+
+.note-list {
+  display: grid;
+  gap: 4px;
+}
+
+.note {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(222, 219, 210, 0.72);
+  text-decoration: none;
+}
+
+.note:first-child {
+  border-top: 0;
+}
+
+.note span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.note strong {
+  font-weight: 600;
+}
+
+.now-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.contact {
+  padding: 70px 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact h2 {
+  margin-bottom: 14px;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.contact p {
+  max-width: 620px;
+  color: var(--muted);
+}
+
+.email-link {
+  margin-top: 14px;
+  padding: 0 18px;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 26px 0 38px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 680px) {
+  .page-shell {
+    width: min(100% - 28px, 760px);
+  }
+
+  .site-header,
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .intro {
+    padding: 62px 0 58px;
+  }
+
+  .section-title,
+  .split,
+  .entry,
+  .note {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .entry span {
+    text-align: left;
+  }
+
+  .link-row a,
+  .email-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
