@@ -1,6 +1,6 @@
 # Gunjit Kumar Dhakar
 
-A minimal personal portfolio inspired by text-first developer homepages. It focuses on Gunjit's career restart, current projects, notes, and contact path for junior developer opportunities.
+A minimal personal portfolio inspired by text-first developer homepages. It focuses on Gunjit's current projects, notes, skills, and contact path for developer opportunities.
 
 ## Structure
 
