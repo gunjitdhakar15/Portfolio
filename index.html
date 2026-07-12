@@ -1,221 +1,287 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Gunjit Kumar Dhakar is a frontend and junior full-stack developer building practical web projects, writing technical notes, and showcasing clean code."
-    />
-    <title>Gunjit Kumar Dhakar</title>
-    <!-- Preconnect for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Modern Premium Fonts: Inter (Sans) & JetBrains Mono (Code/Technical labels) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Cache-busting parameter added to styles.css to force GitHub Pages to load the new stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=1.2" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="site-name" href="#top">Gunjit Kumar Dhakar</a>
-        <div class="header-actions">
-          <nav aria-label="Primary navigation">
-            <a href="#work">Work</a>
-            <a href="#notes">Notes</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <button class="theme-toggle" type="button" aria-label="Switch theme">
-            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
-            <span class="theme-toggle-text">Dark</span>
-          </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gunjit Kumar Dhakar - Backend & Full-Stack Developer specializing in Golang, Python, and Kafka. Alumnus of IIT BHU Varanasi.">
+  <title>Gunjit Kumar Dhakar | Backend &amp; Full-Stack Developer</title>
+  
+  <!-- Preconnect and import premium sans-serif (Inter), elegant Serif (Lora), and monospace (Space Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Custom design stylesheet connection -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Site Header -->
+    <header class="site-header">
+      <a href="#top" class="header-logo">
+        gunjit.systems
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch Theme Dark/Light">
+        <span class="theme-icon" id="theme-icon">☾</span>
+        <span class="theme-text" id="theme-text">Dark</span>
+      </button>
+    </header>
+
+    <main id="top">
+      
+      <!-- Bio / Intro Section -->
+      <section aria-label="Introduction">
+        <h1 class="intro-name">Gunjit Kumar Dhakar</h1>
+        <p class="intro-tagline">
+          Backend &amp; full-stack developer | Golang, Python, Kafka
+        </p>
+        <p class="intro-bio">
+          I am a Backend Systems Engineer graduated from <strong>IIT BHU Varanasi</strong>. 
+          My focus is on engineering concurrent log ingestion engines, fault-tolerant event streams, and real-time APIs. 
+          I build high-performance pipelines in Go, optimize databases, and solve algorithmic challenges.
+        </p>
+        <div class="social-links" aria-label="Social connections">
+          <a href="mailto:gunjit15@gmail.com" class="social-link">Email</a>
+          <a href="https://github.com/gunjitdhakar15" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/gunjit-dhakar/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+          <a href="https://drive.google.com/uc?export=download&id=1OkQU7xlfjL6ZPn1i3vh-hpN0p2DPPzmy" target="_blank" rel="noopener noreferrer" class="social-link">Resume</a>
         </div>
-      </header>
+      </section>
 
-      <main id="top">
-        <section class="intro reveal" aria-label="Introduction">
-          <p class="muted">Alwar, Rajasthan | Frontend and junior full-stack developer</p>
-          <h1>Frontend & junior full-stack developer building practical web applications.</h1>
-          <p>
-            I am Gunjit, a developer based in Alwar, Rajasthan. I focus on creating clean user
-            interfaces and functional backend services using React, Node.js, and modern web technologies.
-          </p>
-          <p>
-            This site serves as a portfolio of my work, featuring key projects I've built and notes
-            on things I learn along the way.
-          </p>
-
-          <div class="link-row" aria-label="Important links">
-            <!-- Email link with Envelope Icon -->
-            <a href="mailto:gunjit15@gmail.com">
-              <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle;">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-              </svg>
-              Email
-            </a>
-            <!-- GitHub link with Octocat Icon -->
-            <a href="https://github.com/gunjitdhakar15" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle;">
-                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026a9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-              </svg>
-              GitHub
-            </a>
-            <!-- LinkedIn link with LinkedIn Icon -->
-            <a href="https://www.linkedin.com/in/gunjit-dhakar/" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle;">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-              LinkedIn
-            </a>
-            <!-- Projects link with Folder Icon -->
-            <a href="#work">
-              <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle;">
-                <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-              </svg>
-              Projects
-            </a>
-            <!-- Resume link with Document Download Icon -->
-            <a href="https://drive.google.com/uc?export=download&id=1OkQU7xlfjL6ZPn1i3vh-hpN0p2DPPzmy" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle;">
-                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
-              </svg>
-              Resume
-            </a>
+      <!-- Featured Work Section (Cyclosec Internship) -->
+      <section aria-label="Featured Experience">
+        <h2 class="section-title">Featured Work</h2>
+        
+        <div class="item-group">
+          <div class="item-header">
+            <h3 class="item-title">Software Engineering Intern</h3>
+            <span class="item-meta">Dec 2025 — Apr 2026</span>
           </div>
-        </section>
-
-        <section class="section reveal" id="work">
-          <div class="section-title">
-            <h2>Work</h2>
-            <p>Selected projects showcasing frontend and full-stack capabilities.</p>
+          <div class="item-subtitle">Cyclosec // London, UK (Remote)</div>
+          
+          <div class="tag-container" aria-label="Technologies used">
+            <span class="tag">Golang</span>
+            <span class="tag">Apache Kafka</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Socket.IO</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">pprof</span>
           </div>
-
-          <div class="entry-list">
-            <article class="entry">
-              <div>
-                <h3>
-                  StapuBox Trial App
-                  <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle; margin-left: 4px;">
-                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
-                  </svg>
-                </h3>
-                <p>
-                  A mobile-first sports trial flow featuring secure OTP authentication, interactive 
-                  profile management, real-time sports data visualization, and structured user feedback interfaces.
-                </p>
-              </div>
-              <span>React Native, API Integration</span>
-            </article>
-
-            <article class="entry">
-              <div>
-                <h3>
-                  DevLedger
-                  <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle; margin-left: 4px;">
-                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
-                  </svg>
-                </h3>
-                <p>
-                  A developer activity and documentation dashboard tracking daily code metrics, 
-                  commit history, task progress, and integration workflows.
-                </p>
-              </div>
-              <span>MERN Stack, Productivity</span>
-            </article>
-
-            <article class="entry">
-              <div>
-                <h3>
-                  Interview Prep Dashboard
-                  <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle; margin-left: 4px;">
-                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
-                  </svg>
-                </h3>
-                <p>
-                  An interactive practice platform for tracking data structures & algorithms progress, 
-                  organizing interview templates, managing mock applications, and monitoring weekly review metrics.
-                </p>
-              </div>
-              <span>JavaScript, CSS Grid, UX</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="section split reveal">
-          <div class="section-title">
-            <h2>Skills</h2>
-            <p>Core technical competencies and development tools.</p>
-          </div>
-
-          <div class="skill-list" aria-label="Skills">
-            <p><strong>Frontend:</strong> HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+), React, responsive layouts.</p>
-            <p><strong>Backend:</strong> Node.js, Express, REST APIs, JWT Authentication, MongoDB.</p>
-            <p><strong>Workflow:</strong> Git, GitHub, cross-browser debugging, deployment, documentation.</p>
-          </div>
-        </section>
-
-        <section class="section reveal" id="notes">
-          <div class="section-title">
-            <h2>Notes</h2>
-            <p>Technical logs and articles on web development.</p>
-          </div>
-
-          <div class="note-list">
-            <a class="note" href="#contact">
-              <span>June 2026</span>
-              <strong>Approaching problem-solving with a builder's mindset</strong>
-            </a>
-            <a class="note" href="#contact">
-              <span>June 2026</span>
-              <strong>Strategies for writing clean, maintainable React code</strong>
-            </a>
-            <a class="note" href="#contact">
-              <span>May 2026</span>
-              <strong>What I learned while polishing CSS architectures for portfolios</strong>
-            </a>
-          </div>
-        </section>
-
-        <section class="section split reveal">
-          <div class="section-title">
-            <h2>Now</h2>
-            <p>Current active areas of work and learning.</p>
-          </div>
-
-          <ul class="now-list">
-            <li>Developing responsive full-stack applications with the MERN stack.</li>
-            <li>Deepening knowledge of scalable CSS architectures and UI design systems.</li>
-            <li>Writing technical logs about optimization, security, and React best practices.</li>
-            <li>Available for junior frontend and junior full-stack engineering opportunities.</li>
+          
+          <ul class="bullet-list">
+            <li>Architected a concurrent Golang log ingestion agent – utilizing Goroutines, Channels, and <code>pprof</code> profiling – processing 50,000+ events/hour with zero data loss and 95% latency reduction.</li>
+            <li>Engineered a fault-tolerant Golang-to-Kafka pipeline with exponential backoff retries and disk queue backpressure.</li>
+            <li>Designed a FastAPI backend with Socket.IO push for real-time anomaly detection, migrating legacy polling endpoints to reduce live data latency.</li>
+            <li>Set up Grafana dashboards to monitor Kafka consumer lag, network rates, and system resources.</li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="contact reveal" id="contact">
-          <p class="muted">Open to front-end, React Native, and junior full-stack roles.</p>
-          <h2>Want to work together?</h2>
-          <p>
-            I am looking for a collaborative team where I can contribute high-quality code, 
-            learn quickly, and help build impactful web and mobile products.
-          </p>
-          <a class="email-link" href="mailto:gunjit15@gmail.com">
-            <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" style="width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle;">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-            </svg>
-            gunjit15@gmail.com
+      <!-- Selected Projects Section -->
+      <section aria-label="Technical Projects">
+        <h2 class="section-title">Selected Projects</h2>
+        
+        <!-- Project 1: QuickPolls -->
+        <div class="item-group">
+          <div class="item-header">
+            <h3 class="item-title">QuickPolls — Real-Time Polling Engine</h3>
+            <span class="item-meta">Jul — Dec 2025</span>
+          </div>
+          <div class="item-subtitle">Independent Builder</div>
+          
+          <div class="tag-container" aria-label="Project technologies">
+            <span class="tag">WebSockets</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">TailwindCSS</span>
+            <span class="tag">GPT-3.5 API</span>
+          </div>
+          
+          <ul class="bullet-list">
+            <li>Architected a high-concurrency polling system using WebSockets, cutting synchronization latency to under 50ms and supporting 1,000+ concurrent users without degradation.</li>
+            <li>Managed 50+ concurrent write operations with backend validation logic to prevent race conditions, using atomic database transactions.</li>
+          </ul>
+        </div>
+
+        <!-- Project 2: Devledger -->
+        <div class="item-group">
+          <div class="item-header">
+            <h3 class="item-title">Devledger — RBAC & PM Dashboard</h3>
+            <span class="item-meta">Apr — Jul 2025</span>
+          </div>
+          <div class="item-subtitle">Developer System</div>
+          
+          <div class="tag-container" aria-label="Project technologies">
+            <span class="tag">MongoDB</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">JWT RBAC</span>
+            <span class="tag">Nodemailer</span>
+          </div>
+          
+          <ul class="bullet-list">
+            <li>Implemented secure JWT-based Role-Based Access Control (RBAC) with granular permissions for Admin, Lead, and Member roles.</li>
+            <li>Reduced MongoDB query latency by 70% using compound indexing, optimized via Atlas performance advisor.</li>
+          </ul>
+        </div>
+
+        <!-- Project 3: ML Climate Modeling -->
+        <div class="item-group">
+          <div class="item-header">
+            <h3 class="item-title">ML Predictive Climate Modeling</h3>
+            <span class="item-meta">Aug 2024 — Apr 2025</span>
+          </div>
+          <div class="item-subtitle">Data Pipeline</div>
+          
+          <div class="tag-container" aria-label="Project technologies">
+            <span class="tag">Python</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Bayesian Opt</span>
+            <span class="tag">REST API</span>
+          </div>
+          
+          <ul class="bullet-list">
+            <li>Engineered a two-step downscaling pipeline to transform low-res Global Climate Model (GCM) data into high-precision hydrological data.</li>
+            <li>Attained 0.93 R² in temperature forecasting using Bayesian-tuned Random Forest, beating baseline models by 22%.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Technical Notes Section -->
+      <section id="notes" aria-label="Technical Logs">
+        <h2 class="section-title">Technical Notes</h2>
+        
+        <div class="notes-list">
+          <a class="note-item" href="#contact">
+            <span class="note-title">Reducing API Latency by 95% with WebSocket Push vs. Polling</span>
+            <span class="note-meta">June 2026</span>
           </a>
-        </section>
-      </main>
+          <a class="note-item" href="#contact">
+            <span class="note-title">Building a Real-Time Log Ingestion Pipeline with Golang and Kafka</span>
+            <span class="note-meta">June 2026</span>
+          </a>
+        </div>
+      </section>
 
-      <footer class="site-footer">
-        <span>Built by Gunjit Kumar Dhakar.</span>
-        <span>One visible step at a time.</span>
-      </footer>
-    </div>
+      <!-- Now Section -->
+      <section aria-label="Now Status">
+        <h2 class="section-title">Now</h2>
+        <ul class="now-list">
+          <li><strong>Learning:</strong> Kafka Streams, System Design, Advanced Golang</li>
+          <li><strong>Looking for:</strong> Backend engineering roles (remote / Gurugram / Bengaluru / Hyderabad)</li>
+        </ul>
+      </section>
 
-    <script src="script.js"></script>
-  </body>
+      <!-- Skills Section -->
+      <section id="skills" aria-label="Technical Stack">
+        <h2 class="section-title">Skills</h2>
+        
+        <div class="skills-stack">
+          <!-- Backend Stack -->
+          <div class="skills-row">
+            <span class="skills-label">Backend</span>
+            <div class="skills-badges">
+              <span class="skill-tag">Golang</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Kafka</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">JWT Auth</span>
+            </div>
+          </div>
+          <!-- Frontend Stack -->
+          <div class="skills-row">
+            <span class="skills-label">Frontend</span>
+            <div class="skills-badges">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+            </div>
+          </div>
+          <!-- DevOps & Systems -->
+          <div class="skills-row">
+            <span class="skills-label">DevOps &amp; Tools</span>
+            <div class="skills-badges">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Git &amp; GitHub</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">System Design</span>
+              <span class="skill-tag">DSA Foundations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section (IIT BHU Only) -->
+      <section aria-label="Education">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="item-group edu-layout">
+          <!-- Custom vector SVG emblem for IIT BHU -->
+          <div class="iit-emblem-svg-container" aria-label="IIT BHU seal logo">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <circle cx="22" cy="22" r="19" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="22" cy="22" r="16" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 1" />
+              <!-- Central Varanasi temple dome silhouette -->
+              <path d="M22 8 L29 28 H15 L22 8 Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="1" />
+              <!-- Spire/shikhara lines -->
+              <line x1="22" y1="8" x2="22" y2="30" stroke="currentColor" stroke-width="1.25" />
+              <line x1="19" y1="18" x2="25" y2="18" stroke="currentColor" stroke-width="1" />
+              <line x1="17" y1="23" x2="27" y2="23" stroke="currentColor" stroke-width="1" />
+              <!-- Stepped base foundation -->
+              <rect x="18" y="28" width="8" height="2" fill="currentColor" />
+              <rect x="16" y="30" width="12" height="1.5" fill="currentColor" />
+              <!-- Chakra gear circle -->
+              <circle cx="22" cy="13" r="1.75" fill="var(--bg-body)" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </div>
+          
+          <div style="flex-grow: 1;">
+            <div class="item-header">
+              <h3 class="item-title">Indian Institute of Technology (IIT) BHU, Varanasi</h3>
+              <span class="item-meta">2021 — 2025</span>
+            </div>
+            <div class="item-subtitle" style="margin-bottom: 0;">
+              Bachelor of Technology (B.Tech) | CGPA: <strong>8.60 / 10.00</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-box" aria-label="Contact Section">
+        <h2 class="section-title">Want to work together?</h2>
+        <p class="contact-text">
+          I'm actively seeking backend or full-stack engineering roles – open to remote, Gurugram, Bengaluru, or Hyderabad. If you're building scalable systems with Go, Python, or Kafka, let's talk.
+        </p>
+        <p style="font-family: var(--font-mono); font-size: 0.85rem;">
+          <a href="mailto:gunjit15@gmail.com">gunjit15@gmail.com</a>
+        </p>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <span>Designed &amp; Engineered by Gunjit Kumar Dhakar</span>
+      </div>
+      <div>
+        <span>System Status: ACTIVE // 2026</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Client side javascript -->
+  <script src="script.js"></script>
+</body>
 </html>

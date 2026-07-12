@@ -1,84 +1,37 @@
-// 1. Header Scroll Effect
-const header = document.querySelector(".site-header");
+// ==========================================================================
+// THEME SWITCHER (LIGHT/DARK MODES PERSISTENCE)
+// ==========================================================================
 
-window.addEventListener("scroll", () => {
-  header.toggleAttribute("data-scrolled", window.scrollY > 16);
-});
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
+const themeText = document.getElementById("theme-text");
 
-// 2. Smooth Scrolling for Navigation Anchors
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
-
-    if (!target) {
-      return;
-    }
-
-    event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
-
-// 3. Theme Toggle Implementation (Light/Dark Mode)
-const themeToggle = document.querySelector(".theme-toggle");
-const themeToggleIcon = themeToggle.querySelector(".theme-toggle-icon");
-const themeToggleText = themeToggle.querySelector(".theme-toggle-text");
-
-function setTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-
+function applyTheme(theme) {
   if (theme === "dark") {
-    themeToggleIcon.textContent = "☼";
-    themeToggleText.textContent = "Light";
-    themeToggle.setAttribute("aria-label", "Switch to light theme");
+    document.documentElement.classList.add("dark");
+    if (themeIcon) themeIcon.textContent = "☼";
+    if (themeText) themeText.textContent = "Light";
   } else {
-    themeToggleIcon.textContent = "☾";
-    themeToggleText.textContent = "Dark";
-    themeToggle.setAttribute("aria-label", "Switch to dark theme");
+    document.documentElement.classList.remove("dark");
+    if (themeIcon) themeIcon.textContent = "☾";
+    if (themeText) themeText.textContent = "Dark";
   }
+  localStorage.setItem("theme", theme);
 }
 
-// Initial Theme Setup
+// Initial state checks
 const savedTheme = localStorage.getItem("theme");
 const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
-  setTheme("dark");
+  applyTheme("dark");
 } else {
-  setTheme("light");
+  applyTheme("light");
 }
 
-themeToggle.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  setTheme(currentTheme === "dark" ? "light" : "dark");
-});
-
-// 4. Scroll Reveal Animations (Intersection Observer)
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("revealed");
-          revealObserver.unobserve(entry.target); // Keep it visible once revealed
-        }
-      });
-    },
-    {
-      threshold: 0.05,
-      rootMargin: "0px 0px -40px 0px", // Animates slightly before coming into view
-    }
-  );
-
-  revealElements.forEach((element) => {
-    revealObserver.observe(element);
-  });
-} else {
-  // Fallback for browsers that don't support IntersectionObserver
-  revealElements.forEach((element) => {
-    element.classList.add("revealed");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isDarkNow = document.documentElement.classList.contains("dark");
+    applyTheme(isDarkNow ? "light" : "dark");
   });
 }
