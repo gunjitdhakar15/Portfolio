@@ -36,6 +36,17 @@
 
     <main id="top">
 
+      <!-- Section Toggle Bar (like a table of contents) -->
+      <nav class="tab-bar" id="tab-bar" aria-label="Section navigation">
+        <button class="tab-btn active" data-filter="all" type="button">All</button>
+        <button class="tab-btn" data-filter="internship" type="button">Internship</button>
+        <button class="tab-btn" data-filter="projects" type="button">Projects</button>
+        <button class="tab-btn" data-filter="notes" type="button">Notes</button>
+        <button class="tab-btn" data-filter="skills" type="button">Skills</button>
+        <button class="tab-btn" data-filter="education" type="button">Education</button>
+        <button class="tab-btn" data-filter="contact" type="button">Contact</button>
+      </nav>
+
       <!-- Bio / Intro Section -->
       <section aria-label="Introduction">
         <h1 class="intro-name">Gunjit Kumar Dhakar</h1>
@@ -59,7 +70,7 @@
       </section>
 
       <!-- Featured Work Section (Cyclosec Internship) -->
-      <section aria-label="Featured Experience">
+      <section id="internship" aria-label="Featured Experience" data-block="internship">
         <h2 class="section-title">Featured Work</h2>
 
         <div class="item-group">
@@ -92,7 +103,7 @@
       </section>
 
       <!-- Selected Projects Section -->
-      <section aria-label="Technical Projects">
+      <section id="projects" aria-label="Technical Projects" data-block="projects">
         <h2 class="section-title">Selected Projects</h2>
 
         <!-- Project 1: QuickPolls -->
@@ -171,7 +182,7 @@
       </section>
 
       <!-- Technical Notes Section -->
-      <section id="notes" aria-label="Technical Logs">
+      <section id="notes" aria-label="Technical Logs" data-block="notes">
         <h2 class="section-title">Technical Notes</h2>
 
         <div class="notes-list">
@@ -187,7 +198,7 @@
       </section>
 
       <!-- Now Section -->
-      <section aria-label="Now Status">
+      <section aria-label="Now Status" data-block="now">
         <h2 class="section-title">Now</h2>
         <ul class="now-list">
           <li><strong>Learning:</strong> Kafka Streams, System Design, Advanced Golang</li>
@@ -196,7 +207,7 @@
       </section>
 
       <!-- Skills Section -->
-      <section id="skills" aria-label="Technical Stack">
+      <section id="skills" aria-label="Technical Stack" data-block="skills">
         <h2 class="section-title">Skills</h2>
 
         <div class="skills-stack">
@@ -239,7 +250,7 @@
       </section>
 
       <!-- Education Section (IIT BHU Only) -->
-      <section aria-label="Education">
+      <section id="education" aria-label="Education" data-block="education">
         <h2 class="section-title">Education</h2>
 
         <div class="item-group edu-layout">
@@ -301,7 +312,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="contact-box" aria-label="Contact Section">
+      <section id="contact" class="contact-box" aria-label="Contact Section" data-block="contact">
         <h2 class="section-title">Want to work together?</h2>
         <p class="contact-text">
           I'm actively seeking backend or full-stack engineering roles – open to remote, Gurugram, Bengaluru, or

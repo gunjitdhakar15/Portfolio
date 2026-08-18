@@ -448,3 +448,59 @@ a:hover {
     flex-direction: row;
   }
 }
+
+/* ==========================================================================
+   SECTION TOGGLE BAR
+   ========================================================================== */
+
+.tab-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 14px 24px;
+  margin: 0 -24px 36px;
+  background-color: var(--bg-body);
+  border-bottom: 1px solid var(--border-base);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--trans), border-color var(--trans),
+    background-color var(--trans);
+}
+
+.tab-btn:hover {
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.25);
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  background-color: rgba(var(--accent-rgb), 0.07);
+}
+
+/* Offset so the sticky bar never covers a section heading on jump */
+main section {
+  scroll-margin-top: 84px;
+}
