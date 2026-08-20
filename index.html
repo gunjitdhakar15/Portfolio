@@ -102,82 +102,84 @@
         </div>
       </section>
 
-      <!-- Selected Projects Section -->
+      <!-- Selected Projects Section (Ankit-style cards) -->
       <section id="projects" aria-label="Technical Projects" data-block="projects">
         <h2 class="section-title">Selected Projects</h2>
 
-        <!-- Project 1: QuickPolls -->
-        <div class="item-group">
-          <div class="item-header">
-            <h3 class="item-title">QuickPolls — Real-Time Polling Engine</h3>
-            <span class="item-meta">Jul — Dec 2025</span>
-          </div>
-          <div class="item-subtitle">Independent Builder</div>
+        <div class="project-grid">
 
-          <div class="tag-container" aria-label="Project technologies">
-            <span class="tag">WebSockets</span>
-            <span class="tag">React.js</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Chart.js</span>
-            <span class="tag">TailwindCSS</span>
-            <span class="tag">GPT-3.5 API</span>
-          </div>
+          <!-- Project 1: QuickPolls -->
+          <article class="project-card">
+            <a class="project-cover cover-a" href="#"
+              aria-label="QuickPolls project">
+              <span class="project-monogram">QP</span>
+            </a>
+            <div class="project-body">
+              <div class="project-row">
+                <h3 class="project-name">QuickPolls</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-desc">
+                Real-time polling engine with sub-50ms sync across 1,000+ concurrent users over WebSockets.
+              </p>
+              <div class="project-links">
+                <!-- TODO: replace href with the live demo URL -->
+                <a href="#" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                <!-- TODO: replace href with the GitHub repo URL -->
+                <a href="https://github.com/gunjitdhakar15" target="_blank" rel="noopener noreferrer">Source <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
 
-          <ul class="bullet-list">
-            <li>Architected a high-concurrency polling system using WebSockets, cutting synchronization latency to under
-              50ms and supporting 1,000+ concurrent users without degradation.</li>
-            <li>Managed 50+ concurrent write operations with backend validation logic to prevent race conditions, using
-              atomic database transactions.</li>
-          </ul>
-        </div>
+          <!-- Project 2: Devledger -->
+          <article class="project-card">
+            <a class="project-cover cover-b" href="#"
+              aria-label="Devledger project">
+              <span class="project-monogram">DL</span>
+            </a>
+            <div class="project-body">
+              <div class="project-row">
+                <h3 class="project-name">Devledger</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-desc">
+                RBAC &amp; project-management dashboard with JWT auth for Admin, Lead, and Member roles.
+              </p>
+              <div class="project-links">
+                <!-- TODO: replace href with the live demo URL -->
+                <a href="#" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                <!-- TODO: replace href with the GitHub repo URL -->
+                <a href="https://github.com/gunjitdhakar15" target="_blank" rel="noopener noreferrer">Source <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
 
-        <!-- Project 2: Devledger -->
-        <div class="item-group">
-          <div class="item-header">
-            <h3 class="item-title">Devledger — RBAC & PM Dashboard</h3>
-            <span class="item-meta">Apr — Jul 2025</span>
-          </div>
-          <div class="item-subtitle">Developer System</div>
+          <!-- Project 3: ML Climate Modeling -->
+          <article class="project-card">
+            <a class="project-cover cover-c" href="#"
+              aria-label="ML Predictive Climate Modeling project">
+              <span class="project-monogram">ML</span>
+            </a>
+            <div class="project-body">
+              <div class="project-row">
+                <h3 class="project-name">Climate Modeling</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-desc">
+                Two-step ML downscaling pipeline hitting 0.93 R² in temperature forecasting with Bayesian-tuned models.
+              </p>
+              <div class="project-links">
+                <!-- TODO: replace href with the live demo URL -->
+                <a href="#" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                <!-- TODO: replace href with the GitHub repo URL -->
+                <a href="https://github.com/gunjitdhakar15" target="_blank" rel="noopener noreferrer">Source <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
 
-          <div class="tag-container" aria-label="Project technologies">
-            <span class="tag">MongoDB</span>
-            <span class="tag">Express.js</span>
-            <span class="tag">React.js</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">JWT RBAC</span>
-            <span class="tag">Nodemailer</span>
-          </div>
-
-          <ul class="bullet-list">
-            <li>Implemented secure JWT-based Role-Based Access Control (RBAC) with granular permissions for Admin, Lead,
-              and Member roles.</li>
-            <li>Reduced MongoDB query latency by 70% using compound indexing, optimized via Atlas performance advisor.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Project 3: ML Climate Modeling -->
-        <div class="item-group">
-          <div class="item-header">
-            <h3 class="item-title">ML Predictive Climate Modeling</h3>
-            <span class="item-meta">Aug 2024 — Apr 2025</span>
-          </div>
-          <div class="item-subtitle">Data Pipeline</div>
-
-          <div class="tag-container" aria-label="Project technologies">
-            <span class="tag">Python</span>
-            <span class="tag">Random Forest</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Bayesian Opt</span>
-            <span class="tag">REST API</span>
-          </div>
-
-          <ul class="bullet-list">
-            <li>Engineered a two-step downscaling pipeline to transform low-res Global Climate Model (GCM) data into
-              high-precision hydrological data.</li>
-            <li>Attained 0.93 R² in temperature forecasting using Bayesian-tuned Random Forest, beating baseline models
-              by 22%.</li>
-          </ul>
         </div>
       </section>
 
