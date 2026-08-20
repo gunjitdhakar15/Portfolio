@@ -63,6 +63,14 @@ if (tabBar) {
   tabs.forEach((t) => {
     t.addEventListener("click", () => {
       const f = t.dataset.filter;
+      if (f === "resume") {
+        window.open(
+          "https://drive.google.com/uc?export=download&id=1OkQU7xlfjL6ZPn1i3vh-hpN0p2DPPzmy",
+          "_blank",
+          "noopener,noreferrer"
+        );
+        return;
+      }
       if (f === "all") {
         if (location.hash) {
           history.pushState("", document.title, location.pathname + location.search);
