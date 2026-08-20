@@ -464,35 +464,18 @@ a:hover {
 }
 
 .project-cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   aspect-ratio: 16 / 10;
   text-decoration: none;
-  background: linear-gradient(135deg, var(--c1), var(--c2));
+  background: #0b0b0b;
+  overflow: hidden;
 }
 
-.project-monogram {
-  font-family: var(--font-serif);
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
-  letter-spacing: 0.04em;
-}
-
-.cover-a {
-  --c1: #3b2f63;
-  --c2: #0b0b0b;
-}
-
-.cover-b {
-  --c1: #0f3d3a;
-  --c2: #0b0b0b;
-}
-
-.cover-c {
-  --c1: #7c2d12;
-  --c2: #0b0b0b;
+.project-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .project-body {
