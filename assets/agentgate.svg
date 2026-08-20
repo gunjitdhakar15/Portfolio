@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="AgentGate preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16a34a"/>
+      <stop offset="1" stop-color="#06281f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <g font-family="Georgia, 'Times New Roman', serif">
+    <rect x="220" y="165" width="760" height="420" rx="22" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.22"/>
+    <circle cx="262" cy="207" r="8" fill="#ffffff" fill-opacity="0.55"/>
+    <circle cx="290" cy="207" r="8" fill="#ffffff" fill-opacity="0.32"/>
+    <circle cx="318" cy="207" r="8" fill="#ffffff" fill-opacity="0.32"/>
+    <text x="262" y="280" font-size="34" fill="#ffffff" fill-opacity="0.92">Agent firewall</text>
+
+    <!-- agent node -->
+    <circle cx="350" cy="385" r="40" fill="#ffffff" fill-opacity="0.9"/>
+    <text x="350" y="396" font-size="30" fill="#06281f" text-anchor="middle" font-family="monospace">AI</text>
+    <text x="350" y="450" font-size="20" fill="#ffffff" fill-opacity="0.8" text-anchor="middle">agent</text>
+
+    <!-- allowed edges -->
+    <g stroke="#ffffff" stroke-opacity="0.55" stroke-width="4" fill="none">
+      <line x1="392" y1="378" x2="500" y2="370"/>
+      <line x1="618" y1="370" x2="724" y2="378"/>
+    </g>
+
+    <!-- gate shield -->
+    <path d="M559 320 L612 338 L612 384 Q612 420 559 438 Q506 420 506 384 L506 338 Z"
+          fill="#ffffff" fill-opacity="0.95"/>
+    <!-- padlock -->
+    <rect x="545" y="372" width="28" height="26" rx="4" fill="#06281f"/>
+    <path d="M550 372 v-8 a9 9 0 0 1 18 0 v8" fill="none" stroke="#06281f" stroke-width="5"/>
+    <circle cx="559" cy="384" r="4" fill="#16a34a"/>
+    <text x="559" y="470" font-size="20" fill="#ffffff" fill-opacity="0.9" text-anchor="middle">gate</text>
+
+    <!-- tool node -->
+    <rect x="724" y="362" width="120" height="48" rx="10" fill="#ffffff" fill-opacity="0.9"/>
+    <text x="784" y="392" font-size="20" fill="#06281f" text-anchor="middle">tool</text>
+
+    <!-- blocked call -->
+    <g stroke="#ff6b6b" stroke-width="4" fill="none">
+      <path d="M584 332 q40 -36 78 -54"/>
+      <line x1="636" y1="270" x2="662" y2="296"/>
+      <line x1="662" y1="270" x2="636" y2="296"/>
+    </g>
+    <text x="612" y="262" font-size="18" fill="#ff6b6b" fill-opacity="0.95" text-anchor="middle">blocked</text>
+
+    <text x="262" y="558" font-size="21" fill="#ffffff" fill-opacity="0.82">policy · redact · rate-limit · audit</text>
+  </g>
+</svg>
