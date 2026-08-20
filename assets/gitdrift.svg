@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="GitDrift preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6f9e"/>
+      <stop offset="1" stop-color="#06283a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <g font-family="Georgia, 'Times New Roman', serif">
+    <rect x="220" y="165" width="760" height="420" rx="22" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.22"/>
+    <circle cx="262" cy="207" r="8" fill="#ffffff" fill-opacity="0.55"/>
+    <circle cx="290" cy="207" r="8" fill="#ffffff" fill-opacity="0.32"/>
+    <circle cx="318" cy="207" r="8" fill="#ffffff" fill-opacity="0.32"/>
+    <text x="262" y="280" font-size="34" fill="#ffffff" fill-opacity="0.92">Architecture scan</text>
+
+    <!-- edges (faint) -->
+    <g stroke="#ffffff" stroke-opacity="0.28" stroke-width="3" fill="none">
+      <line x1="380" y1="340" x2="560" y2="300"/>
+      <line x1="380" y1="340" x2="430" y2="500"/>
+      <line x1="560" y1="300" x2="760" y2="360"/>
+      <line x1="560" y1="300" x2="600" y2="470"/>
+      <line x1="600" y1="470" x2="430" y2="500"/>
+      <line x1="760" y1="360" x2="840" y2="500"/>
+      <line x1="430" y1="500" x2="600" y2="470"/>
+    </g>
+    <!-- highlighted cycle -->
+    <g stroke="#7CFFB0" stroke-width="5" fill="none" stroke-linejoin="round">
+      <path d="M380 340 L560 300 L600 470 Z"/>
+    </g>
+    <!-- nodes -->
+    <g fill="#ffffff">
+      <circle cx="380" cy="340" r="14"/>
+      <circle cx="560" cy="300" r="14"/>
+      <circle cx="600" cy="470" r="14"/>
+      <circle cx="430" cy="500" r="11" fill-opacity="0.7"/>
+      <circle cx="760" cy="360" r="11" fill-opacity="0.7"/>
+      <circle cx="840" cy="500" r="11" fill-opacity="0.7"/>
+    </g>
+
+    <text x="262" y="560" font-size="22" fill="#ffffff" fill-opacity="0.8">12,480 files · 412ms · 3 cycles</text>
+  </g>
+</svg>
