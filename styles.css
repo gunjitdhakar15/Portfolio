@@ -439,12 +439,18 @@ a:hover {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   margin-top: 8px;
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 34rem) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 22rem) {
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -479,7 +485,7 @@ a:hover {
 }
 
 .project-body {
-  padding: 16px;
+  padding: 12px;
 }
 
 .project-row {
@@ -491,7 +497,7 @@ a:hover {
 
 .project-name {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text-primary);
 }
@@ -504,17 +510,17 @@ a:hover {
 
 .project-desc {
   margin-top: 6px;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.5;
 }
 
 .project-links {
-  margin-top: 14px;
+  margin-top: 12px;
   display: flex;
-  gap: 18px;
+  gap: 14px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
