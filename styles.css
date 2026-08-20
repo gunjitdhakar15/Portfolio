@@ -616,3 +616,27 @@ a:hover {
 main section {
   scroll-margin-top: 84px;
 }
+
+/* ==========================================================================
+   VIEW SWITCHING (Ankit-style: each tab is its own page)
+   ========================================================================== */
+
+main > section {
+  animation: viewIn 0.35s ease both;
+}
+
+main > section.is-hidden {
+  display: none;
+  animation: none;
+}
+
+@keyframes viewIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

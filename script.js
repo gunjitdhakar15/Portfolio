@@ -37,50 +37,59 @@ if (themeToggle) {
 }
 
 // ==========================================================================
-// SECTION TOGGLE BAR (smooth-scroll to a section, like a table of contents)
+// SECTION TOGGLE BAR (Ankit-style view switching — each tab is its own page)
 // ==========================================================================
 
 const tabBar = document.getElementById("tab-bar");
 const tabs = tabBar ? Array.from(tabBar.querySelectorAll(".tab-btn")) : [];
-const sectionIds = ["internship", "projects", "notes", "skills", "education", "contact"];
+const viewSections = Array.from(document.querySelectorAll("main > section"));
+const VALID_VIEWS = ["all", "internship", "projects", "notes", "skills", "education", "contact"];
 
-function scrollToSection(id) {
-  const el = id === "all" ? document.getElementById("top") : document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+function viewFromHash() {
+  const h = (location.hash || "").replace(/^#/, "");
+  return VALID_VIEWS.includes(h) ? h : "all";
 }
 
-function setActiveTab(id) {
-  tabs.forEach((t) =>
-    t.classList.toggle("active", t.getAttribute("data-filter") === id)
-  );
+function showView(view) {
+  if (!VALID_VIEWS.includes(view)) view = "all";
+  viewSections.forEach((sec) => {
+    const match = view === "all" || sec.dataset.block === view;
+    sec.classList.toggle("is-hidden", !match);
+  });
+  tabs.forEach((t) => t.classList.toggle("active", t.dataset.filter === view));
 }
 
 if (tabBar) {
   tabs.forEach((t) => {
     t.addEventListener("click", () => {
-      const f = t.getAttribute("data-filter");
-      scrollToSection(f);
-      setActiveTab(f === "all" ? "all" : f);
+      const f = t.dataset.filter;
+      if (f === "all") {
+        if (location.hash) {
+          history.pushState("", document.title, location.pathname + location.search);
+        }
+        showView("all");
+      } else {
+        location.hash = f; // hashchange handler drives the switch
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 
-  // Scroll-spy: keep the active tab in sync with what's on screen
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.target.id !== "top") {
-            setActiveTab(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-    );
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+  // Keep the view in sync with the URL (back/forward, shared links, note jumps)
+  window.addEventListener("hashchange", () => showView(viewFromHash()));
+
+  // Logo returns to the overview ("All") page
+  const logo = document.querySelector(".header-logo");
+  if (logo) {
+    logo.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (location.hash) {
+        history.pushState("", document.title, location.pathname + location.search);
+      }
+      showView("all");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
-  setActiveTab("all");
+  showView(viewFromHash());
 }
