@@ -400,15 +400,23 @@ a:hover {
 }
 
 .iit-emblem-svg-container {
-  width: 38px;
-  height: 38px;
+  width: 46px;
+  height: 46px;
   flex-shrink: 0;
-  background-color: rgba(var(--accent-rgb), 0.04);
-  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-base);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  overflow: hidden;
+}
+
+.iit-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
 }
 
 /* ==========================================================================
