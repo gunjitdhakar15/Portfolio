@@ -106,7 +106,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 24px;
 }
 
 .header-logo {
@@ -610,6 +610,13 @@ a:hover {
   color: var(--accent);
   border-color: rgba(var(--accent-rgb), 0.4);
   background-color: rgba(var(--accent-rgb), 0.07);
+}
+
+/* Theme toggle sits on the left, directly under the section toggle bar */
+.theme-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 28px;
 }
 
 /* Offset so the sticky bar never covers a section heading on jump */
