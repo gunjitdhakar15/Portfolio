@@ -17,7 +17,7 @@ This site is a static portfolio. The easiest first deployment is GitHub Pages.
 The live URL will look like:
 
 ```text
-https://YOUR_GITHUB_USERNAME.github.io/REPOSITORY_NAME/
+https://gunjitdhakar15.github.io/Portfolio/
 ```
 
 ## Option 2: Netlify
